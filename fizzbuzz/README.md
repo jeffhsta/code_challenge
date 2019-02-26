@@ -33,3 +33,7 @@ The possible invalid inputs are:
 
 - Non integer values
 - Any integer below 1
+
+**Source**
+
+[https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
