@@ -20,7 +20,7 @@ defmodule Fibonacci do
   defp next_sequence_number(sequence, sequence_size) when length(sequence) >= sequence_size,
     do: sequence
 
-  defp next_sequence_number(sequence = [last_number | [before_last_number | _]], sequence_size) do
+  defp next_sequence_number(sequence = [last_number, before_last_number | _], sequence_size) do
     next_number = last_number + before_last_number
     next_sequence_number([next_number | sequence], sequence_size)
   end
