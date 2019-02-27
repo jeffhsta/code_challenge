@@ -1,12 +1,11 @@
-fn main() {
-}
+fn main() {}
 
 fn fibonacci(sequence_size: usize) -> Vec<i32> {
     match sequence_size {
         0 => panic!("Invalid argument"),
         1 => vec![1],
         2 => vec![1, 1],
-        _ => next_sequence_number(vec![1, 1], sequence_size)
+        _ => next_sequence_number(vec![1, 1], sequence_size),
     }
 }
 
@@ -28,7 +27,10 @@ fn get_last_two_items(sequence: &Vec<i32>) -> (i32, i32) {
         }
     }
 
-    panic!("Error when tried to get the last two items from vector {:?}", sequence);
+    panic!(
+        "Error when tried to get the last two items from vector {:?}",
+        sequence
+    );
 }
 
 #[test]
