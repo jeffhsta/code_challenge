@@ -1,9 +1,11 @@
-fn main() {
-}
+fn main() {}
 
-fn fizzbuzz(list_size: u8) -> Vec<String>{
+fn fizzbuzz(list_size: u8) -> Vec<String> {
     if list_size > 0 {
-        (1..(list_size + 1)).into_iter().map(|number| parse(number)).collect()
+        (1..(list_size + 1))
+            .into_iter()
+            .map(|number| parse(number))
+            .collect()
     } else {
         panic!("Invalid argument")
     }
@@ -14,7 +16,7 @@ fn parse(number: u8) -> String {
         (0, 0) => "FizzBuzz".to_string(),
         (0, _) => "Fizz".to_string(),
         (_, 0) => "Buzz".to_string(),
-        _ => number.to_string()
+        _ => number.to_string(),
     }
 }
 
@@ -31,13 +33,18 @@ fn return_a_list_with_3_6_and_9_replaced_by_fizz() {
 
 #[test]
 fn return_a_list_with_5_and_10_replaced_by_buzz() {
-    let expected_result = vec!["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"];
+    let expected_result = vec![
+        "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz",
+    ];
     assert_eq!(fizzbuzz(10), expected_result)
 }
 
 #[test]
 fn return_a_list_with_15_replaced_by_fizzbuzz() {
-    let expected_result = vec!["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"];
+    let expected_result = vec![
+        "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14",
+        "FizzBuzz",
+    ];
     assert_eq!(fizzbuzz(15), expected_result)
 }
 
