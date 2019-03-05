@@ -35,7 +35,7 @@ defmodule ClockangleTest do
     end
 
     test "when clock is in 3:30 return angle 105" do
-      assert Clockangle.run(3, 30) == {:ok, 105}
+      assert Clockangle.run(3, 30) == {:ok, 75}
     end
   end
 end

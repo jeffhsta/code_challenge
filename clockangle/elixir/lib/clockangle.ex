@@ -14,7 +14,7 @@ defmodule Clockangle do
     minute_right_scale = calculate_angle(minute, @minute_scale)
     extra_hour_angle = calculate_extra_angle(minute)
 
-    right_angle = abs(hour_right_scale - minute_right_scale) + extra_hour_angle
+    right_angle = abs((hour_right_scale + extra_hour_angle) - minute_right_scale)
     left_angle = @base_angle - right_angle
 
     {:ok, Enum.min([left_angle, right_angle])}
